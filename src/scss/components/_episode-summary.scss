@@ -17,12 +17,12 @@ $summary-image-size: 72px;
 .episode-summary {
     @include clearfix;
     clear: left;
-    border-bottom: 2px solid $color-gray-20;
+    border-bottom: 2px solid $color-marketing-gray-20;
     padding: $layout-md 0 $layout-md;
 
     &:before {
         content: '';
-        background-color: $color-gray-40;
+        background-color: $color-marketing-gray-40;
         border-top: 0.4rem solid #fff; // make it even with the top of the text
         display: block;
         float: right;
@@ -39,6 +39,18 @@ $summary-image-size: 72px;
 .episode-summary-title {
     @include text-body-lg;
     font-weight: bold;
+}
+
+.episode-summary-date {
+    @include text-body-sm;
+    display: block;
+    font-style: italic;
+    font-weight: normal;
+    margin: $spacing-xs 0;
+}
+
+.episode-summary-cta {
+    white-space: nowrap;
 }
 
 @media #{$mq-sm} {
@@ -69,6 +81,12 @@ $summary-image-size: 72px;
         .episode-summary-title,
         .episode-summary-description {
             grid-column-start: 2;
+        }
+
+        .episode-summary-date {
+            display: inline;
+            margin: 0;
+            white-space: nowrap;
         }
     }
 }

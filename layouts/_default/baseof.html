@@ -60,17 +60,15 @@
     {{ end }}
 </head>
 
-<body id="{{ block "bodyID" . }}home{{ end }}">
+<body id="{{ block "bodyID" . }}home{{ end }}" class="mzp-t-firefox">
 
     {{ partial "header.html" }}
 
     {{ block "intro" . }}{{ end }}
 
-    <div>
-        <main class="page-content" aria-label="Content">
-        {{ block "main" . }}{{ end }}
-        </main>
-    </div>
+    <main class="page-content" aria-label="Content">
+    {{ block "main" . }}{{ end }}
+    </main>
 
     {{ partial "footer.html" }}
 

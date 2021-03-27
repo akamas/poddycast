@@ -72,6 +72,7 @@
             <a href="{{ .context.Permalink }}#show-notes" data-shownotes="episode-{{ .context.Params.number }}-shownotes" class="episode-shownotes-link mzp-c-cta-link">Show Notes</a>
         {{ end }}
         {{ end }}
+        <div class="episode-date">Published: {{ dateFormat "January 2, 2006" .context.Params.date }}</div>
     </div>
 
     <!-- the following are presented in modal windows if JS is enabled -->
@@ -87,6 +88,8 @@
             Front matter does not allow variables, so we need to do string substitution.
         */}}
         {{ (replace .context.Params.shownotes "!!baseurl!!" .Site.BaseURL) | markdownify }}
+
+        <a href="{{ .context.Permalink }}#transcript" class="mzp-c-cta-link">Episode transcript</a>
     </div>
     {{ end }}
     {{ end }}
